@@ -3,6 +3,7 @@
 # nekoimi 2024/6/21
 
 import glob
+import io
 import sys
 
 from PIL import Image
@@ -15,6 +16,8 @@ if __name__ == "__main__":
     image_fps2 = ['data/11.png']
     imgs1 = [Image.open(i) for i in image_fps1]
     imgs2 = [Image.open(i) for i in image_fps2]
+
+    ### Image.open(io.BytesIO(imageRawBytes))
 
     # 搜索集合
     corpus_fps = glob.glob('data/*.jpg') + glob.glob('data/*.png')
